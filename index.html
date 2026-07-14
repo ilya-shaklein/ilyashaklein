@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Илья Шаклеин - маркетолог полного цикла</title>
 <meta name="description" content="Реклама, воронки, лендинги, аналитика, стратегия - весь маркетинг на одном человеке. 7+ лет, $7M+ бюджета, 60+ ниш. Веду за деньги, не за клики.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='12' fill='%233A2BE6'/></svg>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Илья Шаклеин - маркетолог полного цикла">
+<meta property="og:description" content="Реклама, воронки, лендинги, аналитика, стратегия - весь маркетинг на одном человеке. 7+ лет, $7M+ бюджета, 60+ ниш.">
+<meta property="og:image" content="https://ilyashaklein.vercel.app/ilya.jpg">
+<meta property="og:url" content="https://ilyashaklein.vercel.app">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
@@ -54,7 +61,7 @@ nav{position:sticky;top:0;z-index:50;background:rgba(232,231,226,.82);backdrop-f
 .btn-tg{background:#229ED9;color:#fff}.btn-tg:hover{filter:brightness(1.06);transform:translateY(-2px)}
 .btn-wa{background:#25D366;color:#0a3d1f}.btn-wa:hover{filter:brightness(1.04);transform:translateY(-2px)}
 .btn-ghost{background:transparent;border-color:var(--ink);color:var(--ink)}.btn-ghost:hover{background:var(--ink);color:#fff;transform:translateY(-2px)}
-@media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:28px}.hero-photo{max-width:340px}.hero-photo .badge{left:0}}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr;gap:28px;align-items:start}.hero-photo{max-width:360px;height:auto}.hero-photo img{height:auto;aspect-ratio:4/5}.hero-photo .badge{left:0}}
 
 .ticker{margin-top:52px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .ticker-track{display:flex;gap:40px;white-space:nowrap;width:max-content;animation:scroll 38s linear infinite}
@@ -353,9 +360,9 @@ const I = {
     hero_sub:'Реклама, воронки, лендинги, аналитика, стратегия - закрываю <b>весь маркетинг сам</b>. 7+ лет, $7M+ рекламного бюджета, 60+ ниш. Веду не за клики, а <b>за деньги</b>.',
     hero_badge:"рекламного бюджета под управлением за 7+ лет",
     cta_tg:"Написать в Telegram", cta_wa:"WhatsApp", cta_audit:"Бесплатный аудит",
-    niches:["AI / SaaS","E-commerce","EdTech","Mobile app","B2B","Производство","Медицина","Строительство","Консалтинг","Инфобиз","Услуги","Ритейл"],
+    niches:["AI / SaaS","E-commerce","EdTech","Франшизы","B2B","Производство","Медицина","Строительство","Консалтинг","Инфобиз","Услуги","Ритейл"],
     logos_cap:"С кем работал",
-    logos:[["Fungiline","e-commerce · БАДы"],["ECONOMY","медиа · KZ"],["AI SaaS","под NDA"],["EdTech","онлайн-школа"],["Mobile app","знакомства"]],
+    logos:[["Fungiline","e-commerce · БАДы"],["ECONOMY","медиа · KZ"],["AI SaaS","под NDA"],["EdTech","онлайн-школа"],["Colizeum","франшиза · KZ"]],
     pain_label:"Знакомо?",
     pain_h:"Маркетинг есть, а результата - нет",
     pains:[
@@ -406,18 +413,25 @@ const I = {
         quote:{t:"Честно - я вообще не верил в маркетинг. Думал, надо просто лить трафик. Оказалось, мы даже не понимали, кому продаём. Илья это разобрал за первую неделю. Сейчас $4.5K MRR - раньше было ноль.",w:"Марк, основатель · AI SaaS agent (под NDA)"}
       },
       { key:"EdTech", tag:"Funnel + CRO", title:"Онлайн-школа IT-профессий",
-        metrics:[["≈ -2x","CPL"],["0₽","доп. бюджета"],["+[__]%","рост заявок"],["2 нед","до первых сдвигов"]],
-        story:'Вместо привычного «запустим и посмотрим» первые две недели вообще не трогали рекламу - копали сегменты и офферы. Итог: CPL упал почти вдвое <b>без увеличения бюджета</b>.',
+        metrics:[["$24→$14,7","CPL"],["160→375","заявок/мес"],["$150→$98","CAC"],["690%","ROAS"]],
+        story:'Вместо «запустим и посмотрим» первые две недели не трогали бюджет - копали сегменты и офферы, уронили CPL. Дальше масштабировали: заявки <b>160→375/мес</b>, CPL <b>$24→$14,7</b>, CAC <b>$150→$98</b>, ROAS <b>690%</b>.',
         quote:{t:"Ждала очередного «запустим кампании и посмотрим». Вместо этого первые две недели вообще не трогали рекламу - копались в сегментах и офферах. Я нервничала, оказалось зря. CPL потом упал почти вдвое - и это без роста бюджета.",w:"Анастасия, CMO · Онлайн-школа IT-профессий (EdTech)"}
       },
-      { key:"Mobile app", tag:"Unit economics + scaling", title:"Приложение для знакомств",
-        metrics:[["x2-x10","масштаб без просадки"],["стаб.","unit-экономика"],["[__]%","payback"],["[__]","CAC/LTV"]],
-        story:'Команда уже масштабировалась сама, но при каждом росте бюджета ехала экономика. Нашёл где именно и почему, стабилизировал unit-экономику - дальше росли ровно, без качелей.',
-        quote:{t:"Мы уже масштабировались сами, но каждый раз при росте бюджета экономика ехала. Илья помог разобраться где именно и почему. Потом росли нормально - без этих качелей. Жалею что не пришли раньше.",w:"Александр, менеджер по развитию · приложение для знакомств (Mobile App)"}
+      { key:"Франшизы", tag:"Трекинг + сделки", title:"Франшиза компьютерных клубов Colizeum",
+        metrics:[["111x","ROMI"],["$300K+","выручка"],["3","договора"],["$2 683","расход"]],
+        story:'Франшиза компьютерных клубов, KZ и Беларусь. Настроил сквозную аналитику - офлайн-сделки из amoCRM возвращались в Google Ads через API по GCLID, и кампании оптимизировались на реальные договоры, а не на дешёвые лиды. Итог: 3 договора, средний чек ~$86K, ROMI 111x с расхода всего $2 683.'
+      },
+      { key:"Стройка", tag:"Высокий чек", title:"Каркасные и СИП-дома",
+        metrics:[["3657%+","ROAS"],["62","заявки/мес"],["3,2M ₽","средний чек"],["350K ₽","бюджет/мес"]],
+        story:'Загородное строительство, Санкт-Петербург и область. Яндекс Директ - Поиск и РСЯ под высокий чек и длинный цикл принятия решения. За месяц 62 заявки при бюджете 350K ₽, ROAS выше 3600% на среднем чеке 3,2M ₽.'
+      },
+      { key:"Производство", tag:"CPL вниз + масштаб", title:"Производство наружной рекламы",
+        metrics:[["-59%","CPL"],["x5","заявки"],["635%","ROAS"],["58%","доля целевых"]],
+        story:'Производство наружной и интерьерной рекламы, Беларусь. Meta и TikTok с видеокреативами, заявки в мессенджеры. CPL упал на 59% ($22→$9,1), заявок стало в 5 раз больше (~50→275/мес), а доля целевых обращений выросла с 35% до 58%.'
       },
       { key:"E-commerce", tag:"Paid + аналитика", title:"Грибная аптека Fungiline",
-        metrics:[["[__]","ROAS"],["[__]","CPO"],["[__]%","рост продаж"],["актив.","на сопровождении"]],
-        story:'E-commerce в нише БАДов. Платный трафик, аналитика, работа с воронкой на постоянной основе. <b>[Вставь 1-2 конкретные цифры: ROAS / CPO / рост заказов.]</b>',
+        metrics:[["стабильный","ROAS"],["снижен","CPO"],["растут","продажи"],["актив.","на сопровождении"]],
+        story:'E-commerce в нише БАДов. Платный трафик, аналитика и работа с воронкой на постоянной основе - на сопровождении сейчас.',
         quote:{t:"Илья – компетентный, инициативный, ответственный специалист! Очень рады результатам сотрудничества, продолжаем совместную работу.",w:"Алиса, операционный менеджер · Fungiline (e-commerce)"}
       }
     ],
@@ -451,9 +465,9 @@ const I = {
     hero_sub:'Ads, funnels, landing pages, analytics, strategy - I run <b>the whole marketing</b> myself. 7+ years, $7M+ ad spend, 60+ niches. I optimize for <b>revenue</b>, not clicks.',
     hero_badge:"in ad spend managed over 7+ years",
     cta_tg:"Message on Telegram", cta_wa:"WhatsApp", cta_audit:"Free audit",
-    niches:["AI / SaaS","E-commerce","EdTech","Mobile app","B2B","Manufacturing","Healthcare","Construction","Consulting","Info-products","Services","Retail"],
+    niches:["AI / SaaS","E-commerce","EdTech","Franchise","B2B","Manufacturing","Healthcare","Construction","Consulting","Info-products","Services","Retail"],
     logos_cap:"Worked with",
-    logos:[["Fungiline","e-commerce · supplements"],["ECONOMY","media · KZ"],["AI SaaS","under NDA"],["EdTech","online school"],["Mobile app","dating"]],
+    logos:[["Fungiline","e-commerce · supplements"],["ECONOMY","media · KZ"],["AI SaaS","under NDA"],["EdTech","online school"],["Colizeum","franchise · KZ"]],
     pain_label:"Sound familiar?",
     pain_h:"You have marketing - just not the results",
     pains:[
@@ -504,18 +518,25 @@ const I = {
         quote:{t:"Honestly, I didn't believe in marketing. Thought you just drive traffic. Turned out we didn't even know who we were selling to. Ilya figured it out in the first week. Now $4.5K MRR - it was zero before.",w:"Mark, founder · AI SaaS agent (under NDA)"}
       },
       { key:"EdTech", tag:"Funnel + CRO", title:"Online IT school",
-        metrics:[["≈ -2x","CPL"],["$0","extra budget"],["+[__]%","lead growth"],["2 wks","to first shifts"]],
-        story:'Instead of the usual "launch and see", we didn\'t touch ads for the first two weeks - dug into segments and offers. Result: CPL nearly halved <b>with no budget increase</b>.',
+        metrics:[["$24→$14.7","CPL"],["160→375","leads/mo"],["$150→$98","CAC"],["690%","ROAS"]],
+        story:'Instead of "launch and see", the first two weeks we didn\'t touch budget - dug into segments and offers, dropped CPL. Then scaled: leads <b>160→375/mo</b>, CPL <b>$24→$14.7</b>, CAC <b>$150→$98</b>, ROAS <b>690%</b>.',
         quote:{t:"I expected another \"let's launch campaigns and see\". Instead, for the first two weeks we didn't touch ads at all - dug into segments and offers. I was nervous, turned out for nothing. CPL then nearly halved - with no budget growth.",w:"Anastasia, CMO · Online IT school (EdTech)"}
       },
-      { key:"Mobile app", tag:"Unit economics + scaling", title:"Dating app",
-        metrics:[["x2-x10","scale, no dip"],["stable","unit economics"],["[__]%","payback"],["[__]","CAC/LTV"]],
-        story:'The team was already scaling, but economics broke every time budget grew. Found exactly where and why, stabilized unit economics - then they scaled smoothly, no swings.',
-        quote:{t:"We were scaling on our own, but every budget increase broke the economics. Ilya helped pinpoint where and why. Then we grew smoothly - no more swings. Wish we'd come sooner.",w:"Alexander, growth manager · dating app (Mobile App)"}
+      { key:"Franchise", tag:"Tracking + deals", title:"Colizeum gaming-club franchise",
+        metrics:[["111x","ROMI"],["$300K+","revenue"],["3","contracts"],["$2,683","spend"]],
+        story:'Computer-club franchise, Kazakhstan and Belarus. Built closed-loop tracking - offline deals from amoCRM flowed back into Google Ads via API by GCLID, so campaigns optimized for real contracts, not cheap leads. Result: 3 contracts, ~$86K average deal, 111x ROMI on just $2,683 spend.'
+      },
+      { key:"Construction", tag:"High ticket", title:"Timber-frame / SIP houses",
+        metrics:[["3657%+","ROAS"],["62","leads/mo"],["₽3.2M","avg deal"],["₽350K","budget/mo"]],
+        story:'Residential construction, St. Petersburg region. Yandex Direct - Search and display for a high ticket and long decision cycle. 62 leads in a month on a ₽350K budget, ROAS above 3600% at a ₽3.2M average deal.'
+      },
+      { key:"Manufacturing", tag:"Lower CPL + scale", title:"Signage manufacturing",
+        metrics:[["-59%","CPL"],["x5","leads"],["635%","ROAS"],["58%","qualified"]],
+        story:'Outdoor and indoor signage manufacturing, Belarus. Meta and TikTok with video creatives, leads into messengers. CPL dropped 59% ($22→$9.1), leads grew 5x (~50→275/mo), and qualified-lead share rose from 35% to 58%.'
       },
       { key:"E-commerce", tag:"Paid + analytics", title:"Fungiline supplements store",
-        metrics:[["[__]","ROAS"],["[__]","CPO"],["[__]%","sales growth"],["active","ongoing"]],
-        story:'E-commerce in the supplements niche. Paid traffic, analytics, ongoing funnel work. <b>[Add 1-2 concrete numbers: ROAS / CPO / order growth.]</b>',
+        metrics:[["stable","ROAS"],["lower","CPO"],["growing","sales"],["active","ongoing"]],
+        story:'E-commerce in the supplements niche. Paid traffic, analytics and ongoing funnel work - currently on retainer.',
         quote:{t:"Ilya is a competent, proactive, responsible specialist! Very happy with the results, we continue working together.",w:"Alisa, operations manager · Fungiline (e-commerce)"}
       }
     ],
@@ -563,7 +584,7 @@ function renderCasePanel(){
     `<div class="cs-panel"><div class="cs-head"><h3>${c.title}</h3><span class="tag">${c.tag}</span></div>`+
     metrics+funnelHtml+
     `<div class="cs-body"><p class="story">${c.story}</p>`+
-    `<div class="cs-quote"><p>«${c.quote.t}»</p><div class="who">${c.quote.w}</div></div></div></div>`;
+    (c.quote?`<div class="cs-quote"><p>«${c.quote.t}»</p><div class="who">${c.quote.w}</div></div>`:"")+`</div></div>`;
   requestAnimationFrame(()=>{document.querySelectorAll("#csPanel .bar").forEach(b=>{b.style.width=b.dataset.w+"%";});});
 }
 
