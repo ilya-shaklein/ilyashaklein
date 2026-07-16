@@ -142,6 +142,15 @@ section{padding:66px 0}
 .frow .fl{flex:1;min-width:0}.frow .fl .t{font-weight:600;font-size:15px}.frow .fl .d{font-size:13px;color:var(--muted)}
 .frow .fv{font-family:'JetBrains Mono';font-weight:700;font-size:16px;white-space:nowrap}.frow .fv.pos{color:var(--pos)}
 @media(max-width:720px){.cs-metrics{grid-template-columns:repeat(2,1fr)}.cs-metrics .m:nth-child(2n){border-right:0}}
+.cs-bullets{margin:18px 0 0;padding:0;list-style:none}
+.cs-bullets li{position:relative;padding:10px 0 10px 28px;font-size:15px;line-height:1.5;border-top:1px solid var(--line)}
+.cs-bullets li:first-child{border-top:0}
+.cs-bullets li::before{content:"\2192";position:absolute;left:0;color:var(--accent);font-weight:700}
+.cs-blocks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.cs-block{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:18px}
+.cs-block-h{font-family:'Bricolage Grotesque';font-weight:700;font-size:15px;margin-bottom:7px;letter-spacing:-.01em}
+.cs-block p{font-size:13.5px;color:var(--muted);line-height:1.5}
+@media(max-width:640px){.cs-blocks{grid-template-columns:1fr}}
 
 .fmt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:38px}
 .fmt{border:1px solid var(--line);border-radius:var(--r);padding:22px;background:var(--surface)}
@@ -421,7 +430,8 @@ const I = {
       },
       { key:"Франшизы", tag:"Трекинг + сделки", title:"Франшиза компьютерных клубов Colizeum",
         metrics:[["111x","ROMI"],["$300K+","выручка"],["3","договора"],["$2 683","расход"]],
-        story:'Франшиза компьютерных клубов, KZ и Беларусь. Настроил сквозную аналитику - офлайн-сделки из amoCRM возвращались в Google Ads через API по GCLID, и кампании оптимизировались на реальные договоры, а не на дешёвые лиды. Итог: 3 договора, средний чек ~$86K, ROMI 111x с расхода всего $2 683.'
+        story:'Франшиза компьютерных клубов, KZ и Беларусь. Настроил сквозную аналитику - офлайн-сделки из amoCRM возвращались в Google Ads через API по GCLID, и кампании оптимизировались на реальные договоры, а не на дешёвые лиды. Итог: 3 договора, средний чек ~$86K, ROMI 111x с расхода всего $2 683.',
+        quote:{t:"Илья выстроил работу с нуля. Всё отлично, большое спасибо",w:"Лидия, маркетолог проекта · Colizeum (франшиза)"}
       },
       { key:"Стройка", tag:"Высокий чек", title:"Каркасные и СИП-дома",
         metrics:[["3657%+","ROAS"],["62","заявки/мес"],["3,2M ₽","средний чек"],["350K ₽","бюджет/мес"]],
@@ -431,10 +441,21 @@ const I = {
         metrics:[["-59%","CPL"],["x5","заявки"],["635%","ROAS"],["58%","доля целевых"]],
         story:'Производство наружной и интерьерной рекламы, Беларусь. Meta и TikTok с видеокреативами, заявки в мессенджеры. CPL упал на 59% ($22→$9,1), заявок стало в 5 раз больше (~50→275/мес), а доля целевых обращений выросла с 35% до 58%.'
       },
-      { key:"E-commerce", tag:"Paid + аналитика", title:"Грибная аптека Fungiline",
-        metrics:[["стабильный","ROAS"],["снижен","CPO"],["растут","продажи"],["актив.","на сопровождении"]],
-        story:'E-commerce в нише БАДов. Платный трафик, аналитика и работа с воронкой на постоянной основе - на сопровождении сейчас.',
-        quote:{t:"Илья – компетентный, инициативный, ответственный специалист! Очень рады результатам сотрудничества, продолжаем совместную работу.",w:"Алиса, операционный менеджер · Fungiline (e-commerce)"}
+      { key:"E-commerce", tag:"Тяжёлая ниша · с нуля", title:"Грибная аптека Fungiline",
+        metrics:[["$8 000+","выручка с Google Ads"],["128","продаж"],["1,1 млн","показов"],["актив.","на сопровождении"]],
+        story:'E-commerce, БАДы на основе грибов. Google Ads, сквозная аналитика и работа с воронкой с нуля до стабильных продаж - на постоянном сопровождении.',
+        bullets:[
+          'Запустил Google Ads с нуля: аккаунты, структура кампаний, стратегия, сквозная аналитика - всё самостоятельно',
+          '623 106 ₽ (~$8 000) выручки и 128 продаж при среднем чеке ~$63',
+          'Реструктурировал аккаунт: разделил бренд/небренд, отсёк неэффективные группы, запустил PMax и Shopping',
+          'Брендовая кампания вышла на окупаемость ~15x - бренд раскачан и генерит дешёвые продажи',
+          'Протестировал Яндекс.Директ, по данным отсёк как неэффективный, сфокусировал бюджет на Google Ads'
+        ],
+        blocks:[
+          ['Сложная ниша','Грибные добавки с amanita microdosing - одна из самых тяжёлых категорий для платного трафика: Google регулярно блокирует по политикам recreational drugs и healthcare. Держу кампании живыми там, где большинство ловит перманентные баны - за счёт постоянной работы с формулировками на сайте и в объявлениях.'],
+          ['Аналитика','Выстроил сквозную аналитику с нуля и восстановил сломанную атрибуцию: нашёл и устранил потерю gclid/UTM из-за редиректа в теме и неполные dataLayer-события. GA4 и Google Ads получают реальные данные о заказах - решения по цифрам, а не вслепую.']
+        ],
+        quote:{t:"Илья - компетентный, инициативный, ответственный специалист! Очень рады результатам сотрудничества, продолжаем совместную работу.",w:"Алиса, операционный менеджер · Fungiline (e-commerce)"}
       }
     ],
     fmt_label:"Форматы работы",
@@ -447,16 +468,16 @@ const I = {
     ],
     audit_label:"Лид-магнит",
     audit_h:"Бесплатный экспресс-аудит вашего лендинга",
-    audit_lead:"Дайте ссылку - AI-инструмент разберёт страницу по конверсии и подсветит слабые места за минуту. Бесплатно и без обязательств.",
+    audit_lead:"Тот же подход, которым я поднимаю конверсию клиентам - только автоматом. Дайте ссылку, AI разберёт вашу страницу по конверсии и подсветит слабые места за минуту. Бесплатно.",
     audit_btn:"Проверить",
     audit_note:"Займёт ~30 секунд. Результат - на экране, без спама на почту.",
     audit_err:"Не получилось разобрать эту страницу. Проверьте ссылку и попробуйте ещё раз.",
     cta_label:"Дальше",
     contact_h:"Расскажите задачу - отвечу с конкретикой",
-    contact_p:"Без долгих созвонов и воды. Напишите, что за проект и что болит - вернусь с тем, что можно сделать и как.",
+    contact_p:"Без долгих созвонов и воды. Напишите, что за проект и что болит - отвечаю обычно в течение пары часов и возвращаюсь с тем, что можно сделать и как.",
     f_name:"Как вас зовут", f_contact:"Telegram / WhatsApp / телефон", f_task:"Задача в двух словах",
     f_send:"Отправить заявку",
-    f_ok:"Готово. Свяжусь с вами в ближайшее время.",
+    f_ok:"Готово. Отвечу в течение пары часов - в Telegram или WhatsApp.",
     f_fill:"Заполните имя и контакт.",
     f_fail:"Что-то пошло не так. Напишите напрямую в Telegram."
   },
@@ -526,7 +547,8 @@ const I = {
       },
       { key:"Franchise", tag:"Tracking + deals", title:"Colizeum gaming-club franchise",
         metrics:[["111x","ROMI"],["$300K+","revenue"],["3","contracts"],["$2,683","spend"]],
-        story:'Computer-club franchise, Kazakhstan and Belarus. Built closed-loop tracking - offline deals from amoCRM flowed back into Google Ads via API by GCLID, so campaigns optimized for real contracts, not cheap leads. Result: 3 contracts, ~$86K average deal, 111x ROMI on just $2,683 spend.'
+        story:'Computer-club franchise, Kazakhstan and Belarus. Built closed-loop tracking - offline deals from amoCRM flowed back into Google Ads via API by GCLID, so campaigns optimized for real contracts, not cheap leads. Result: 3 contracts, ~$86K average deal, 111x ROMI on just $2,683 spend.',
+        quote:{t:"Ilya built the whole thing from scratch. All great, thank you.",w:"Lidia, project marketer · Colizeum (franchise)"}
       },
       { key:"Construction", tag:"High ticket", title:"Timber-frame / SIP houses",
         metrics:[["3657%+","ROAS"],["62","leads/mo"],["₽3.2M","avg deal"],["₽350K","budget/mo"]],
@@ -536,9 +558,20 @@ const I = {
         metrics:[["-59%","CPL"],["x5","leads"],["635%","ROAS"],["58%","qualified"]],
         story:'Outdoor and indoor signage manufacturing, Belarus. Meta and TikTok with video creatives, leads into messengers. CPL dropped 59% ($22→$9.1), leads grew 5x (~50→275/mo), and qualified-lead share rose from 35% to 58%.'
       },
-      { key:"E-commerce", tag:"Paid + analytics", title:"Fungiline supplements store",
-        metrics:[["stable","ROAS"],["lower","CPO"],["growing","sales"],["active","ongoing"]],
-        story:'E-commerce in the supplements niche. Paid traffic, analytics and ongoing funnel work - currently on retainer.',
+      { key:"E-commerce", tag:"Hard niche · from scratch", title:"Fungiline mushroom-supplements store",
+        metrics:[["$8,000+","revenue from Google Ads"],["128","sales"],["1.1M","impressions"],["active","ongoing"]],
+        story:'E-commerce, mushroom-based supplements. Google Ads, closed-loop analytics and funnel work from zero to steady sales - on an ongoing retainer.',
+        bullets:[
+          'Launched Google Ads from scratch: accounts, campaign structure, strategy, closed-loop analytics - all myself',
+          '~$8,000 in revenue and 128 sales at a ~$63 average order value',
+          'Restructured the account: split brand/non-brand, cut inefficient groups, launched PMax and Shopping',
+          'Brand campaign reached ~15x return - the brand is warmed up and drives cheap sales',
+          'Tested Yandex Direct, cut it as inefficient by the data, focused budget on Google Ads'
+        ],
+        blocks:[
+          ['Hard niche','Mushroom supplements with amanita microdosing - one of the toughest categories for paid traffic: Google routinely blocks under recreational-drugs and healthcare policies. I keep campaigns alive where most get permanent bans - through constant work on wording on the site and in the ads.'],
+          ['Analytics','Built closed-loop analytics from scratch and fixed broken attribution: found and removed gclid/UTM loss from a theme redirect and incomplete dataLayer events. GA4 and Google Ads now get real order data - decisions by numbers, not blind.']
+        ],
         quote:{t:"Ilya is a competent, proactive, responsible specialist! Very happy with the results, we continue working together.",w:"Alisa, operations manager · Fungiline (e-commerce)"}
       }
     ],
@@ -552,16 +585,16 @@ const I = {
     ],
     audit_label:"Lead magnet",
     audit_h:"Free express audit of your landing page",
-    audit_lead:"Drop a link - an AI tool breaks the page down by conversion and flags weak spots in a minute. Free, no strings.",
+    audit_lead:"The same approach I use to lift conversion for clients - automated. Drop a link, AI breaks your page down by conversion and flags weak spots in a minute. Free.",
     audit_btn:"Analyze",
     audit_note:"Takes ~30 seconds. Result on screen, no email spam.",
     audit_err:"Couldn't parse that page. Check the link and try again.",
     cta_label:"Next",
     contact_h:"Tell me the task - I'll reply with specifics",
-    contact_p:"No long calls, no fluff. Tell me the project and what hurts - I'll come back with what's doable and how.",
+    contact_p:"No long calls, no fluff. Tell me the project and what hurts - I usually reply within a couple of hours with what's doable and how.",
     f_name:"Your name", f_contact:"Telegram / WhatsApp / phone", f_task:"Task in a nutshell",
     f_send:"Send request",
-    f_ok:"Done. I'll get back to you shortly.",
+    f_ok:"Done. I'll reply within a couple of hours - on Telegram or WhatsApp.",
     f_fill:"Fill in your name and contact.",
     f_fail:"Something went wrong. Message me directly on Telegram."
   }
@@ -582,10 +615,12 @@ function renderCasePanel(){
   const metrics='<div class="cs-metrics">'+c.metrics.map((m,i)=>
     `<div class="m"><div class="v ${i<2?'pos':''}">${m[0]}</div><div class="l">${m[1]}</div></div>`
   ).join("")+'</div>';
+  const bulletsHtml=c.bullets?'<ul class="cs-bullets">'+c.bullets.map(b=>`<li>${b}</li>`).join("")+'</ul>':"";
+  const blocksHtml=c.blocks?'<div class="cs-blocks">'+c.blocks.map(bl=>`<div class="cs-block"><div class="cs-block-h">${bl[0]}</div><p>${bl[1]}</p></div>`).join("")+'</div>':"";
   document.getElementById("csPanel").innerHTML=
     `<div class="cs-panel"><div class="cs-head"><h3>${c.title}</h3><span class="tag">${c.tag}</span></div>`+
     metrics+funnelHtml+
-    `<div class="cs-body"><p class="story">${c.story}</p>`+
+    `<div class="cs-body"><p class="story">${c.story}</p>`+bulletsHtml+blocksHtml+
     (c.quote?`<div class="cs-quote"><p>«${c.quote.t}»</p><div class="who">${c.quote.w}</div></div>`:"")+`</div></div>`;
   requestAnimationFrame(()=>{document.querySelectorAll("#csPanel .bar").forEach(b=>{b.style.width=b.dataset.w+"%";});});
 }
